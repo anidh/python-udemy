@@ -1,0 +1,3 @@
+totalLecture=245
+lectureNumber=int(input("Enter Your Lecture Number"))
+print((lambda lecture96Number:(lectureNumber/totalLecture)*100)(lectureNumber))
