@@ -1,28 +1,9 @@
 from tkinter import *
-
-#using Menu Demo Here
-def addProject():
-    print("Menu Item Clicked!")
+import tkinter.messagebox
 root=Tk()
-fileMenu=Menu(root)
-root.config(menu=fileMenu)
-fileSubMenu=Menu(fileMenu)
-fileMenu.add_cascade(label="File",menu=fileSubMenu)
-fileSubMenu.add_command(label="New Project...",command=addProject)
-fileSubMenu.add_command(label="New...",command=addProject)
-fileSubMenu.add_command(label="New Scratch File...",command=addProject)
-fileSubMenu.add_separator()
-editMenu=Menu(fileMenu)
-fileMenu.add_cascade(label="Edit",menu=editMenu)
-editMenu.add_command(label="Edit File",command=addProject)
-#Adding A Toolbar to the GUI
-toolbar=Frame(root,bg="Pink")
-insertButton=Button(toolbar,text="Print",command=addProject)
-insertButton.pack(side=LEFT,padx=2,pady=3)
-printButton=Button(toolbar,text="Print",command=addProject)
-printButton.pack(padx=2,pady=3)
-toolbar.pack()
-#Adding The Status Bar For The GUI
-statusBar=Label(root,text="This is a status bar!",bd=1,relief=SUNKEN,anchor=W)
-statusBar.pack(side=BOTTOM,fill=X)
+#Using Canvas On Tinkter
+canvas=Canvas(root)
+newLine=canvas.create_line(0,0,255,255)
+otherLine=canvas.create_line(6,7,50,87)
+canvas.pack()
 root.mainloop()

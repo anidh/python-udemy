@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="137bbc39-ac17-47fa-ab57-3dd2b223f583" name="Default" comment="">
+    <list default="true" id="137bbc39-ac17-47fa-ab57-3dd2b223f583" name="Default" comment="Added Message Box Functionality">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui.py" afterDir="false" />
     </list>
@@ -31,8 +31,11 @@
       <file leaf-file-name="gui.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gui.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+            <state relative-caret-position="119">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -307,7 +310,21 @@
       <option name="project" value="LOCAL" />
       <updated>1532193695528</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added Toolbar To The Gui and removed some code">
+      <created>1532194879971</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1532194879971</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added Status Bar">
+      <created>1532195513615</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1532195513615</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -350,7 +367,9 @@
     <MESSAGE value="Fooled Around a bit!" />
     <MESSAGE value="Added Grid Manager Buttons" />
     <MESSAGE value="Added Drop Down Menu's" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Drop Down Menu's" />
+    <MESSAGE value="Added Toolbar To The Gui and removed some code" />
+    <MESSAGE value="Added Status Bar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Status Bar" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/if.py">
@@ -675,8 +694,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gui.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
