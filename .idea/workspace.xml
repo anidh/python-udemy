@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="137bbc39-ac17-47fa-ab57-3dd2b223f583" name="Default" comment="Added Message Box Functionality">
+    <list default="true" id="137bbc39-ac17-47fa-ab57-3dd2b223f583" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/CalculatorApp.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,11 +28,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gui.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gui.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gui.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="136">
+              <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CalculatorApp.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CalculatorApp.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="41" column="18" lean-forward="true" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -52,6 +64,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>git</find>
+      <find>from tkinter import \*\nimport parser\n\#Building the Calculator App\nroot\=Tk\(\)\nroot\.title\(\&quot;Calculator\&quot;\)\n\#Adding Input Field\ndisplay\=Entry\(root\)\ndisplay\.grid\(row\=1\,columnspan\=6\,sticky\=W\+E\)\n\#Defining Function to Add Values To the Entry Field\ni\=0\ndef addEntry\(num\)\:\n    global i\n    display\.insert\(i\,num\)\n    i\+\=1\n\#Function For Clear All\ndef clearAll\(\)\:\n    display\.delete\(0\,END\)\ndef clearSingle\(\)\:\n    theString\=display\.get\(\)\n    if len\(theString\)\&gt;0\:\n        newString\=theString\[\:\-1\]\n        clearAll\(\)\n        display\.insert\(0\,newString\)\n    else\:\n        newString\=\&quot;Error\&quot;\n        clearAll\(\)\n        display\.insert\(0\,newString\)\n        clearAll\(\)\ndef getOperator\(operator\)\:\n    global i\n    lengthO\=len\(operator\)\n    display\.insert\(i\,operator\)\n    i\+\=lengthO\ndef calculateResult\(\)\:\n    value\=display\.get\(\)\n    try\:\n        interValue\=parser\.expr\(value\)\.compile\(\)\n        result\=eval\(interValue\)\n        clearAll\(\)\n        display\.insert\(i\,result\)\n\#Adding Buttons Row 1\nButton\(root\,text\=\&quot;1\&quot;\,command\=lambda \:addEntry\(1\)\)\.grid\(row\=2\,column\=0\)\nButton\(root\,text\=\&quot;2\&quot;\,command\=lambda \:addEntry\(2\)\)\.grid\(row\=2\,column\=1\)\nButton\(root\,text\=\&quot;3\&quot;\,command\=lambda \:addEntry\(3\)\)\.grid\(row\=2\,column\=2\)\n\#Adding Buttons Row 2\nButton\(root\,text\=\&quot;4\&quot;\,command\=lambda \:addEntry\(4\)\)\.grid\(row\=3\,column\=0\)\nButton\(root\,text\=\&quot;5\&quot;\,command\=lambda \:addEntry\(5\)\)\.grid\(row\=3\,column\=1\)\nButton\(root\,text\=\&quot;6\&quot;\,command\=lambda \:addEntry\(6\)\)\.grid\(row\=3\,column\=2\)\n\#Adding Buttons Row 3\nButton\(root\,text\=\&quot;7\&quot;\,command\=lambda \:addEntry\(7\)\)\.grid\(row\=4\,column\=0\)\nButton\(root\,text\=\&quot;8\&quot;\,command\=lambda \:addEntry\(8\)\)\.grid\(row\=4\,column\=1\)\nButton\(root\,text\=\&quot;9\&quot;\,command\=lambda \:addEntry\(9\)\)\.grid\(row\=4\,column\=2\)\n\#Adding functional buttons\nButton\(root\,text\=\&quot;AC\&quot;\,command\=clearAll\)\.grid\(row\=5\,column\=0\)\nButton\(root\,text\=\&quot;0\&quot;\,command\=lambda \:addEntry\(0\)\)\.grid\(row\=5\,column\=1\)\nButton\(root\,text\=\&quot;\=\&quot;\)\.grid\(row\=5\,column\=2\)\n\#Adding Mathematical Buttons\nButton\(root\,text\=\&quot;\+\&quot;\,command\=lambda \:getOperator\(\&quot;\+\&quot;\)\)\.grid\(row\=2\,column\=3\)\nButton\(root\,text\=\&quot;\-\&quot;\,command\=lambda \:getOperator\(\&quot;\-\&quot;\)\)\.grid\(row\=3\,column\=3\)\nButton\(root\,text\=\&quot;\*\&quot;\,command\=lambda \:getOperator\(\'\*\'\)\)\.grid\(row\=4\,column\=3\)\nButton\(root\,text\=\&quot;\/\&quot;\,command\=lambda \:getOperator\(\&quot;\/\&quot;\)\)\.grid\(row\=5\,column\=3\)\n\#Adding More Functionalities\nButton\(root\,text\=\&quot;Pi\&quot;\,command\=lambda \:getOperator\(\&quot;\*3\.14\&quot;\)\)\.grid\(row\=2\,column\=4\)\nButton\(root\,text\=\&quot;\%\&quot;\,command\=lambda \:getOperator\(\&quot;\%\&quot;\)\)\.grid\(row\=3\,column\=4\)\nButton\(root\,text\=\&quot;\(\&quot;\,command\=lambda \:getOperator\(\&quot;\(\&quot;\)\)\.grid\(row\=4\,column\=4\)\nButton\(root\,text\=\&quot;exp\&quot;\,command\=lambda \:getOperator\(\&quot;\*\*\&quot;\)\)\.grid\(row\=5\,column\=4\)\n\#\-\-\-\-\-\nButton\(root\,text\=\&quot;\&lt;\-\-\&quot;\,command\=clearSingle\)\.grid\(row\=2\,column\=5\)\nButton\(root\,text\=\&quot;\!\&quot;\,command\=lambda \:getOperator\(\&quot;\!\&quot;\)\)\.grid\(row\=3\,column\=5\)\nButton\(root\,text\=\&quot;\)\&quot;\,command\=lambda \:getOperator\(\&quot;\)\&quot;\)\)\.grid\(row\=4\,column\=5\)\nButton\(root\,text\=\&quot;\^\&quot;\,command\=lambda \:getOperator\(\&quot;\^\&quot;\)\)\.grid\(row\=5\,column\=5\)\nroot\.mainloop\(\)</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -60,7 +73,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/SICalc.py" />
         <option value="$PROJECT_DIR$/if.py" />
         <option value="$PROJECT_DIR$/list.py" />
         <option value="$PROJECT_DIR$/range.py" />
@@ -111,6 +123,7 @@
         <option value="$PROJECT_DIR$/jsons.py" />
         <option value="$PROJECT_DIR$/guiApp.py" />
         <option value="$PROJECT_DIR$/gui.py" />
+        <option value="$PROJECT_DIR$/CalculatorApp.py" />
       </list>
     </option>
   </component>
@@ -163,8 +176,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.gui">
-    <configuration name="courseprogress" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.CalculatorApp">
+    <configuration name="CalculatorApp" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Basic" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -176,7 +189,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/courseprogress" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CalculatorApp.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -256,18 +269,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.guiApp" />
-      <item itemvalue="Python.courseprogress" />
       <item itemvalue="Python.test" />
       <item itemvalue="Python.jsons" />
       <item itemvalue="Python.gui" />
+      <item itemvalue="Python.CalculatorApp" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.CalculatorApp" />
         <item itemvalue="Python.gui" />
         <item itemvalue="Python.guiApp" />
         <item itemvalue="Python.jsons" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.courseprogress" />
       </list>
     </recent_temporary>
   </component>
@@ -324,7 +337,14 @@
       <option name="project" value="LOCAL" />
       <updated>1532195513615</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Canvas Functionality">
+      <created>1532199187728</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1532199187728</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -334,6 +354,7 @@
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3290938" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3290938" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3290938" />
@@ -347,7 +368,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3290938" />
     </layout>
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -369,16 +389,10 @@
     <MESSAGE value="Added Drop Down Menu's" />
     <MESSAGE value="Added Toolbar To The Gui and removed some code" />
     <MESSAGE value="Added Status Bar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Status Bar" />
+    <MESSAGE value="Canvas Functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Canvas Functionality" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/if.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/list.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -694,8 +708,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gui.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="136">
+          <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CalculatorApp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="41" column="18" lean-forward="true" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
