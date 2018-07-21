@@ -1,19 +1,20 @@
 from tkinter import *
 
-#using Classes Concept Here
-class tkinterMenu():
-    def __init__(self,newRoot):
-        self.frame=Frame(newRoot)
-        self.frame.pack
-
-        self.printButton=Button(newRoot,text="This will Print Something on Console",command=self.printSomething)
-        self.printButton.pack()
-
-        self.quitButton=Button(newRoot,text="X",command=self.frame.quit)
-        self.quitButton.pack()
-
-    def printSomething(self):
-        print("Something")
+#using Menu Demo Here
+def addProject():
+    print("Menu Item Clicked!")
 root=Tk()
-b=tkinterMenu(root)
+fileMenu=Menu(root)
+root.config(menu=fileMenu)
+fileSubMenu=Menu(fileMenu)
+fileMenu.add_cascade(label="File",menu=fileSubMenu)
+fileSubMenu.add_command(label="New Project...",command=addProject)
+fileSubMenu.add_command(label="New...",command=addProject)
+fileSubMenu.add_command(label="New Scratch File...",command=addProject)
+fileSubMenu.add_separator()
+openRecent=Menu(fileMenu)
+openRecent.add_command(label="recentFile...",command=addProject)
+editMenu=Menu(fileMenu)
+fileMenu.add_cascade(label="Edit",menu=editMenu)
+editMenu.add_command(label="Edit File",command=addProject)
 root.mainloop()
