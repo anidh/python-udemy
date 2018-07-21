@@ -2,6 +2,7 @@
 #Importing the library first
 from tkinter import *
 root=Tk()
-label=Label(root,text="Hello Anidh")
+whatToPrint=input("Ente The Text You Want To Print")
+label=Label(root,text=whatToPrint)
 label.pack()
 label.mainloop()
