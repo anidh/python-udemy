@@ -22,4 +22,7 @@ insertButton.pack(side=LEFT,padx=2,pady=3)
 printButton=Button(toolbar,text="Print",command=addProject)
 printButton.pack(padx=2,pady=3)
 toolbar.pack()
+#Adding The Status Bar For The GUI
+statusBar=Label(root,text="This is a status bar!",bd=1,relief=SUNKEN,anchor=W)
+statusBar.pack(side=BOTTOM,fill=X)
 root.mainloop()
